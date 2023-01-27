@@ -21,10 +21,10 @@ public class PostProcessingController {
     private PostProcessingScheduler postProcessingScheduler;
 
     @GetMapping(path = "/postprocess")
-    public ResponseEntity<PostProcessingJsonEntity> manualPostProcessBatch() {
+    public PostProcessingJsonEntity manualPostProcessBatch() {
 
     	PostProcessingJsonEntity postProcessingJsonEntity = postProcessingScheduler.smartCommPostProcessing();
     	
-    	return new ResponseEntity<>(postProcessingJsonEntity, HttpStatus.OK);
+    	return postProcessingJsonEntity;
     }
 }
