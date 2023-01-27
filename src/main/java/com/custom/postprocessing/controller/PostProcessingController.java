@@ -27,4 +27,11 @@ public class PostProcessingController {
     	
     	return postProcessingJsonEntity;
     }
+    
+    @GetMapping(path = "/test")
+    public String apiTest() {
+
+    	return "api testing in azure app services";
+    }
+    
 }
